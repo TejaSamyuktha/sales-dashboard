@@ -110,31 +110,31 @@ DAX Measures for Power BI
 
 
 ## Data Analysis
-1.  Revenue Growth Year-over-Year
+### 1.  Revenue Growth Year-over-Year
 Insight:
 
 Revenue has grown steadily from ₹90M in 2017 to ₹130M in 2020, with a peak of ₹145M in 2019.
 Interpretation:
 The business is scaling well, but the slight dip in 2020 might be due to market conditions (e.g., COVID-19 impact).
-2. Top Performing Markets
+### 2. Top Performing Markets
 Insight:
 
 Delhi NCR is the most profitable market contributing ~52% of total revenue, followed by Mumbai and Ahmedabad.
 Interpretation:
 These Tier-1 markets are revenue drivers. Consider expansion or retention strategies here.
-3.  Best-Selling Products
+### 3.  Best-Selling Products
 Insight:
 
 Product types like Consumer Electronics and Grocery Essentials top the sales list both in quantity and revenue.
 Interpretation:
 These categories could benefit from targeted promotions and stocking priorities.
-4. Monthly Seasonality in Sales
+### 4. Monthly Seasonality in Sales
 Insight:
 
 Revenue tends to spike in July and December, indicating seasonal or festival-related boosts.
 Interpretation:
 These periods can be leveraged with promotions, combo offers, or bundled pricing.
-5. 🧭 Zone-Wise Distribution
+### 5. 🧭 Zone-Wise Distribution
 Insight:
 
 Northern and Western zones contribute over 75% of revenue.
