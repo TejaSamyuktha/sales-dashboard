@@ -60,11 +60,9 @@ Our dataset consists of the following observations which include:
 ## ER Diagram
 <img width="1917" height="973" alt="sales 20_07_2025 17_47_26" src="https://github.com/user-attachments/assets/bc1202d8-ac4b-49f5-96e8-311d9cd12350" />
 ## Data Cleaning
-#Data Cleaning 
+
 
 This project involves cleaning, analyzing, and visualizing sales transaction data using **SQL** for querying and **DAX** for Power BI reporting. The dataset includes transactions, products, markets, customers, and time-related tables from 2017 to 2020.
-
----
 
 ## 📋 Table of Contents
 
@@ -81,8 +79,6 @@ This project involves cleaning, analyzing, and visualizing sales transaction dat
 ## SQL Queries for Analysis
 
 ### 1. Total Revenue per Year
-
-sql
 SELECT d.year, SUM(st.amount) AS total_revenue
 FROM sales_transactions st
 JOIN date d ON st.order_date = d.date
