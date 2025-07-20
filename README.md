@@ -12,31 +12,51 @@
 To analyze sales trends across regions, customer types, and product categories over four years, and to identify strategic opportunities for growth and optimization.
 
 ## Dataset Description
-Our data set consists of the following observations which include:
-Transactions
-  .product_code-Unique identifier for the product sold in the transaction
-  .customer_code-Unique identifier for the customer who placed the order
-  .market_code-Unique identifier of the market (city/region) where the order was placed
-  .order_date-Date on which the transaction occurred
-  .sales_qty-Number of units sold in the transaction
-  .sales-Sale price per unit (can be before discount or tax)
-  .amount-Total transaction amount (quantity × unit price, adjusted if needed)
-Products
-  .product_code-Unique identifier for the product (used to join with transactions)
-  .product_type-Type/category of product (e.g., Electronics, Apparel, Grocery, etc.)
-Markets 
-  .market_code-Unique code for each market/city
-  .markets_name-Name of the market (e.g., Delhi NCR, Mumbai, Chennai)
-  .zone-Region-classification (e.g., North, South, East, West)
-Date 
-  .date-Actual date of the transaction
-  .cy_date-Custom-formatted date (optional: e.g., MM-YYYY or fiscal calendar)
-  .year-Year (e.g., 2017, 2018...)
-  .month_name-Month name (e.g., Jan, Feb, Mar...)
-Customer 
-  .customer_code-Unique ID for each customer
-  .customer_name-Name or label of the customer (e.g., "Nixon", "Electrical Ltd")
-  .customer_type-Type of customer 
+
+Our dataset consists of the following observations which include:
+
+###  Transactions
+
+- **product_code** – Unique identifier for the product sold in the transaction  
+- **customer_code** – Unique identifier for the customer who placed the order  
+- **market_code** – Unique identifier of the market (city/region) where the order was placed  
+- **order_date** – Date on which the transaction occurred  
+- **sales_qty** – Number of units sold in the transaction  
+- **sales** – Sale price per unit (can be before discount or tax)  
+- **amount** – Total transaction amount (quantity × unit price, adjusted if needed)  
+
+---
+
+###  Products
+
+- **product_code** – Unique identifier for the product (used to join with transactions)  
+- **product_type** – Type/category of product (e.g., Electronics, Apparel, Grocery, etc.)  
+
+---
+
+###  Markets
+
+- **market_code** – Unique code for each market/city  
+- **markets_name** – Name of the market (e.g., Delhi NCR, Mumbai, Chennai)  
+- **zone** – Region-classification (e.g., North, South, East, West)  
+
+---
+
+###  Date
+
+- **date** – Actual date of the transaction  
+- **cy_date** – Custom-formatted date (optional: e.g., MM-YYYY or fiscal calendar)  
+- **year** – Year (e.g., 2017, 2018...)  
+- **month_name** – Month name (e.g., Jan, Feb, Mar...)  
+
+---
+
+###  Customer
+
+- **customer_code** – Unique ID for each customer  
+- **customer_name** – Name or label of the customer (e.g., "Nixon", "Electrical Ltd")  
+- **customer_type** – Type of customer  
+
 ## ER Diagram
 <img width="1917" height="973" alt="sales 20_07_2025 17_47_26" src="https://github.com/user-attachments/assets/bc1202d8-ac4b-49f5-96e8-311d9cd12350" />
 ## Data Cleaning
