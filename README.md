@@ -79,27 +79,25 @@ This project involves cleaning, analyzing, and visualizing sales transaction dat
 ## SQL Queries for Analysis
 
 ### 1. Total Revenue per Year
-SELECT d.year, SUM(st.amount) AS total_revenue
-FROM sales_transactions st
-JOIN date d ON st.order_date = d.date
-GROUP BY d.year
-ORDER BY d.year;
+      SELECT d.year, SUM(st.amount) AS total_revenue
+      FROM sales_transactions st
+      JOIN date d ON st.order_date = d.date
+      GROUP BY d.year
+      ORDER BY d.year;
 ### 2. Top 5 Markets by Revenue
-sql
-SELECT m.markets_name, SUM(st.amount) AS revenue
-FROM sales_transactions st
-JOIN markets m ON st.market_code = m.market_code
-GROUP BY m.markets_name
-ORDER BY revenue DESC
-LIMIT 5;
+     SELECT m.markets_name, SUM(st.amount) AS revenue
+     FROM sales_transactions st
+     JOIN markets m ON st.market_code = m.market_code
+     GROUP BY m.markets_name
+     ORDER BY revenue DESC
+     LIMIT 5;
 ### 3.Top 5 Products by Quantity Sold
-sql
-SELECT p.product_type, SUM(st.sales_qty) AS total_qty
-FROM sales_transactions st
-JOIN products p ON st.product_code = p.product_code   
-GROUP BY p.product_type
-ORDER BY total_qty DESC
-LIMIT 5;
+    SELECT p.product_type, SUM(st.sales_qty) AS total_qty
+    FROM sales_transactions st
+    JOIN products p ON st.product_code = p.product_code   
+    GROUP BY p.product_type
+    ORDER BY total_qty DESC
+    LIMIT 5;
 DAX Measures for Power BI
 ### 1.Total Revenue
             Total Revenue = SUM(sales_transactions[amount])
