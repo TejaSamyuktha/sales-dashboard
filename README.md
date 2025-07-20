@@ -4,7 +4,7 @@
 - [Case Study](#case-study)
 - [Dataset Description](#dataset-description)
 - [ER Diagram](#er-diagram)
-- [Data Cleaning](#data cleaning)
+- [Data Cleaning](#data-cleaning)
 - [Data Analysis](#data-analysis)
 - [Dashboard](#dashboard)
 
@@ -40,32 +40,61 @@ Customer
 ## ER Diagram
 <img width="1917" height="973" alt="sales 20_07_2025 17_47_26" src="https://github.com/user-attachments/assets/bc1202d8-ac4b-49f5-96e8-311d9cd12350" />
 ## Data Cleaning
-SQL QUERIES for Analysis:
- 1. Total Revenue per Year
-    SELECT d.year, SUM(st.amount) AS total_revenue
-    FROM sales_transactions st
-    JOIN date d ON st.order_date = d.date
-    GROUP BY d.year
-    ORDER BY d.year;
- 2. Top 5 Markets by Revenue
-    SELECT m.markets_name, SUM(st.amount) AS revenue
-    FROM sales_transactions st
-    JOIN markets m ON st.market_code = m.market_code
-    GROUP BY m.markets_name
-    ORDER BY revenue DESC
-    LIMIT 5;
- 3.  Top 5 Products by Quantity Sold
-     SELECT p.product_type, SUM(st.sales_qty) AS total_qty
-     FROM sales_transactions st
-     JOIN products p ON st.product_code = p.product_code
-     GROUP BY p.product_type
-     ORDER BY total_qty DESC
-     LIMIT 5;
- DAX MEASURES for Power BI
-  . Total Revenue
-          Total Revenue = SUM(sales_transactions[amount])
-  .Total Quantity Sold
-          Total Sales Qty = SUM(sales_transactions[sales_qty])
+#Data Cleaning 
+
+This project involves cleaning, analyzing, and visualizing sales transaction data using **SQL** for querying and **DAX** for Power BI reporting. The dataset includes transactions, products, markets, customers, and time-related tables from 2017 to 2020.
+
+---
+
+## 📋 Table of Contents
+
+- [SQL Queries for Analysis](#sql-queries-for-analysis)
+  - [1. Total Revenue per Year](#1-total-revenue-per-year)
+  - [2. Top 5 Markets by Revenue](#2-top-5-markets-by-revenue)
+  - [3. Top 5 Products by Quantity Sold](#3-top-5-products-by-quantity-sold)
+- [DAX Measures for Power BI](#dax-measures-for-power-bi)
+  - [• Total Revenue](#•-total-revenue)
+  - [• Total Quantity Sold](#•-total-quantity-sold)
+
+---
+
+## SQL Queries for Analysis
+
+### 1. Total Revenue per Year
+
+sql
+SELECT d.year, SUM(st.amount) AS total_revenue
+FROM sales_transactions st
+JOIN date d ON st.order_date = d.date
+GROUP BY d.year
+ORDER BY d.year;
+### 2. Top 5 Markets by Revenue
+sql
+SELECT m.markets_name, SUM(st.amount) AS revenue
+FROM sales_transactions st
+JOIN markets m ON st.market_code = m.market_code
+GROUP BY m.markets_name
+ORDER BY revenue DESC
+LIMIT 5;
+### 3.Top 5 Products by Quantity Sold
+sql
+SELECT p.product_type, SUM(st.sales_qty) AS total_qty
+FROM sales_transactions st
+JOIN products p ON st.product_code = p.product_code   
+GROUP BY p.product_type
+ORDER BY total_qty DESC
+LIMIT 5;
+DAX Measures for Power BI
+### 1.Total Revenue
+            Total Revenue = SUM(sales_transactions[amount])
+### 2.Total Quantity Sold
+            Total Sales Qty = SUM(sales_transactions[sales_qty])
+
+
+
+
+
+
 ## Data Analysis
 1.  Revenue Growth Year-over-Year
 Insight:
